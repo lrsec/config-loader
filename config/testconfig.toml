@@ -1,0 +1,6 @@
+id = 123
+desc = "test config"
+
+[server]
+url = "http://test.test"
+port = 8080
