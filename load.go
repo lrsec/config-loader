@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	BILL_RUN_MODE_ENV = "BILL_RUN_MODE"
+	RUN_MODE_ENV = "RUN_MODE"
 )
 
 var (
@@ -24,7 +24,7 @@ func init() {
 	var err error
 
 	hasRunmode := false
-	if runmode, hasRunmode = os.LookupEnv(BILL_RUN_MODE_ENV); !hasRunmode {
+	if runmode, hasRunmode = os.LookupEnv(RUN_MODE_ENV); !hasRunmode {
 		panic("Can not find environment BILL_RUN_MODE")
 	}
 
@@ -43,7 +43,7 @@ func getRelativePath(fileName string) string {
 }
 
 // decode config from file. config must be a pointer
-func Load(config interface{}, confFile string) error {
+func LoadToml(config interface{}, confFile string) error {
 	relativePath := getRelativePath(confFile)
 
 	var err error

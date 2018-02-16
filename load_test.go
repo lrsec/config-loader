@@ -29,7 +29,7 @@ func TestLoad(t *testing.T) {
 	configFile := "testconfig.toml"
 	cfg := &TestCfg{}
 
-	if err := Load(cfg, configFile); err != nil {
+	if err := LoadToml(cfg, configFile); err != nil {
 		t.Errorf("Load error: %v", err)
 	}
 
