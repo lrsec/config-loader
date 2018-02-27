@@ -25,7 +25,7 @@ func init() {
 
 	hasRunmode := false
 	if runmode, hasRunmode = os.LookupEnv(RUN_MODE_ENV); !hasRunmode {
-		panic("Can not find environment BILL_RUN_MODE")
+		panic("Can not find environment RUN_MODE")
 	}
 
 	workPath, err := os.Getwd()
